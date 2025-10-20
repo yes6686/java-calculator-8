@@ -6,16 +6,17 @@ public class StringCalculator {
             return 0;
         }
 
-        String delimiter = ",|:";
+        String delimiter = ",|:"; // default delimiters: comma or colon
         String numbers = input;
 
         if (input.startsWith("//")) {
             String[] parts = input.split("\n", 2);
             if (parts.length != 2) {
-                throw new IllegalArgumentException("커스텀 구분자 포맷이 잘못되었습니다.");
+                throw new IllegalArgumentException("Invalid custom delimiter format.");
             }
 
-            delimiter = java.util.regex.Pattern.quote(parts[0].substring(2)); // 정규식 안전 처리
+            // Escape the delimiter for use in regular expressions
+            delimiter = java.util.regex.Pattern.quote(parts[0].substring(2));
             numbers = parts[1];
         }
 
@@ -26,11 +27,11 @@ public class StringCalculator {
             try {
                 int number = Integer.parseInt(token);
                 if (number < 0) {
-                    throw new IllegalArgumentException("음수는 허용되지 않습니다: " + number);
+                    throw new IllegalArgumentException("Negative numbers are not allowed: " + number);
                 }
                 sum += number;
             } catch (NumberFormatException e) {
-                throw new IllegalArgumentException("숫자가 아닌 값이 포함되어 있습니다: " + token);
+                throw new IllegalArgumentException("Non-numeric value detected: " + token);
             }
         }
         return sum;
