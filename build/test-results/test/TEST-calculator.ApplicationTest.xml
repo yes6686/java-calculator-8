@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="calculator.ApplicationTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2025-10-20T09:11:43.115Z" hostname="YECHAN" time="0.134">
+  <properties/>
+  <testcase name="커스텀_구분자_사용()" classname="calculator.ApplicationTest" time="0.119">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expecting actual:&#13;&#10;  &quot;&quot;&#13;&#10;to contain:&#13;&#10;  &quot;결과 : 1&quot; " type="java.lang.AssertionError">java.lang.AssertionError: 
+Expecting actual:
+  &quot;&quot;
+to contain:
+  &quot;결과 : 1&quot; 
+	at calculator.ApplicationTest.lambda$커스텀_구분자_사용$0(ApplicationTest.java:15)
+	at org.junit.jupiter.api.AssertTimeoutPreemptively.lambda$assertTimeoutPreemptively$0(AssertTimeoutPreemptively.java:48)
+	at org.junit.jupiter.api.AssertTimeoutPreemptively.lambda$submitTask$3(AssertTimeoutPreemptively.java:95)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</failure>
+  </testcase>
+  <testcase name="예외_테스트()" classname="calculator.ApplicationTest" time="0.013">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expecting code to raise a throwable." type="java.lang.AssertionError">java.lang.AssertionError: 
+Expecting code to raise a throwable.
+	at calculator.ApplicationTest.lambda$예외_테스트$2(ApplicationTest.java:22)
+	at org.junit.jupiter.api.AssertTimeoutPreemptively.lambda$assertTimeoutPreemptively$0(AssertTimeoutPreemptively.java:48)
+	at org.junit.jupiter.api.AssertTimeoutPreemptively.lambda$submitTask$3(AssertTimeoutPreemptively.java:95)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
