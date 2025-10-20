@@ -11,8 +11,11 @@ public class StringCalculator {
 
         if (input.startsWith("//")) {
             String[] parts = input.split("\n", 2);
+            if (parts.length != 2) {
+                throw new IllegalArgumentException("커스텀 구분자 포맷이 잘못되었습니다.");
+            }
 
-            delimiter = parts[0].substring(2);
+            delimiter = parts[0].substring(2); // "//;" → ";"
             numbers = parts[1];
         }
 
