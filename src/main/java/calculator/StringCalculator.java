@@ -15,7 +15,7 @@ public class StringCalculator {
                 throw new IllegalArgumentException("커스텀 구분자 포맷이 잘못되었습니다.");
             }
 
-            delimiter = parts[0].substring(2); // "//;" → ";"
+            delimiter = java.util.regex.Pattern.quote(parts[0].substring(2)); // 정규식 안전 처리
             numbers = parts[1];
         }
 

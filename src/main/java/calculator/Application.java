@@ -4,8 +4,15 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class Application {
     public static void main(String[] args) {
-        System.out.println("덧셈할 문자열을 입력해 주세요.");
-        String input = Console.readLine();
+        System.out.println("구분자를 포함한 첫 줄을 입력하세요 (예: //;):");
+        String firstLine = Console.readLine();
+
+        String input = firstLine;
+        if (firstLine.startsWith("//")) {
+            System.out.println("계산할 숫자를 입력하세요 (예: 1;2;3):");
+            String secondLine = Console.readLine();
+            input = firstLine + "\n" + secondLine;
+        }
 
         try {
             int result = StringCalculator.calculate(input);
